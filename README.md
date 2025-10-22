@@ -4,7 +4,9 @@ Um portfólio moderno e responsivo desenvolvido para apresentar minha jornada co
 
 ## 🌐 Ver Portfólio Online
 
-👉 **[Acesse meu portfólio aqui: omoshaa.github.io/portfolio](https://omoshaa.github.io/portfolio/)**
+👉 **[🚀 ACESSAR PORTFÓLIO ONLINE](https://omoshaa.github.io/portfolio/)**
+
+_Clique no link acima para visualizar o portfólio completo e interativo!_
 
 ## 🚀 Sobre o Projeto
 
