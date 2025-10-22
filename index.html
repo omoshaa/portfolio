@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Moisés Filipe - Desenvolvedor Full Stack especializado em Java, Python, React e tecnologias modernas. Confira meu portfólio com projetos inovadores."
+    />
+    <meta
+      name="keywords"
+      content="desenvolvedor, full stack, java, python, react, flutter, portfolio, moisés filipe"
+    />
+    <meta name="author" content="Moisés Filipe" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://moisesfilipe.dev" />
+    <meta
+      property="og:title"
+      content="Moisés Filipe - Desenvolvedor Full Stack"
+    />
+    <meta
+      property="og:description"
+      content="Desenvolvedor apaixonado por tecnologia, especializado em criar soluções inovadoras e experiências digitais incríveis."
+    />
+    <meta property="og:image" content="assets/minhafoto.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://moisesfilipe.dev" />
+    <meta
+      property="twitter:title"
+      content="Moisés Filipe - Desenvolvedor Full Stack"
+    />
+    <meta
+      property="twitter:description"
+      content="Desenvolvedor apaixonado por tecnologia, especializado em criar soluções inovadoras e experiências digitais incríveis."
+    />
+    <meta property="twitter:image" content="assets/minhafoto.jpg" />
+
+    <title>Moisés Filipe - Portfolio</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- EmailJS SDK -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <div class="nav-logo">
+          <h2>Moisés Filipe</h2>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="#home" class="nav-link">Início</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">Sobre</a></li>
+          <li class="nav-item">
+            <a href="#experience" class="nav-link">Experiência</a>
+          </li>
+          <li class="nav-item">
+            <a href="#skills" class="nav-link">Habilidades</a>
+          </li>
+          <li class="nav-item">
+            <a href="#projects" class="nav-link">Projetos</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contato</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="hero-content">
+          <div class="hero-text">
+            <br /><br />
+            <h1>Olá, eu sou <span class="highlight">Moisés Filipe</span></h1>
+            <p class="hero-subtitle">Desenvolvedor Full Stack</p>
+            <p class="hero-description">
+              Apaixonado por tecnologia e sempre em busca de novos desafios. Se
+              especializando em criar soluções inovadoras e experiências
+              digitais incríveis.
+            </p>
+            <div class="hero-buttons">
+              <a href="#contact" class="btn btn-primary">Entre em Contato</a>
+              <a
+                href="https://www.linkedin.com/in/mois%C3%A9s-filipe-568412297/"
+                target="_blank"
+                class="btn btn-secondary"
+              >
+                <i class="fab fa-linkedin"></i> LinkedIn
+              </a>
+              <a
+                href="assets/cv.pdf"
+                class="btn btn-download"
+                download="Moises_Filipe_CV.pdf"
+              >
+                <i class="fas fa-download"></i> Download CV
+              </a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <div class="image-container">
+              <img
+                src="assets/minhafoto.jpg"
+                alt="Moisés Filipe"
+                class="profile-image"
+              />
+              <div class="image-overlay"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about">
+        <div class="container">
+          <h2 class="section-title">Sobre Mim</h2>
+          <div class="about-content">
+            <div class="about-text">
+              <p>
+                Sou um desenvolvedor apaixonado por tecnologia, com experiência
+                em desenvolvimento web moderno. Tenho interesse em criar
+                soluções eficientes e user-friendly que fazem a diferença na
+                vida das pessoas.
+              </p>
+              <p>
+                Sempre em busca de aprender novas tecnologias e metodologias
+                para aprimorar minhas habilidades e entregar projetos de alta
+                qualidade.
+              </p>
+              <div class="social-links">
+                <a
+                  href="https://www.linkedin.com/in/mois%C3%A9s-filipe-568412297/"
+                  target="_blank"
+                  class="social-link"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+                <a
+                  href="https://github.com/omoshaa"
+                  target="_blank"
+                  class="social-link"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a
+                  href="https://www.instagram.com/dupe_mosh/"
+                  target="_blank"
+                  class="social-link"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="skills">
+        <div class="container">
+          <h2 class="section-title">Habilidades</h2>
+          <div class="skills-grid">
+            <div class="skill-card">
+              <i class="fab fa-java skill-icon"></i>
+              <h3>Java</h3>
+              <p>Desenvolvimento backend robusto</p>
+            </div>
+            <div class="skill-card">
+              <i class="fab fa-js-square skill-icon"></i>
+              <h3>JavaScript</h3>
+              <p>Desenvolvimento web dinâmico</p>
+            </div>
+            <div class="skill-card">
+              <i class="fab fa-python skill-icon"></i>
+              <h3>Python</h3>
+              <p>Automação e análise de dados</p>
+            </div>
+            <div class="skill-card">
+              <i class="fab fa-html5 skill-icon"></i>
+              <h3>HTML5</h3>
+              <p>Estruturação semântica moderna</p>
+            </div>
+            <div class="skill-card">
+              <i class="fab fa-css3-alt skill-icon"></i>
+              <h3>CSS3</h3>
+              <p>Estilização responsiva e moderna</p>
+            </div>
+            <div class="skill-card">
+              <i class="fas fa-database skill-icon"></i>
+              <h3>SQL & NoSQL</h3>
+              <p>Gestão de dados relacionais e não-relacionais</p>
+            </div>
+            <div class="skill-card">
+              <i class="fas fa-server skill-icon"></i>
+              <h3>Oracle</h3>
+              <p>Administração de banco de dados</p>
+            </div>
+            <div class="skill-card">
+              <i class="fab fa-react skill-icon"></i>
+              <h3>React</h3>
+              <p>Interfaces modernas e componentes</p>
+            </div>
+            <div class="skill-card">
+              <i class="fab fa-node-js skill-icon"></i>
+              <h3>Node.js</h3>
+              <p>Backend JavaScript escalável</p>
+            </div>
+            <div class="skill-card">
+              <i class="fab fa-aws skill-icon"></i>
+              <h3>AWS</h3>
+              <p>Serviços de nuvem Amazon</p>
+            </div>
+            <div class="skill-card">
+              <i class="fab fa-docker skill-icon"></i>
+              <h3>Docker</h3>
+              <p>Containerização de aplicações</p>
+            </div>
+            <div class="skill-card">
+              <i class="fab fa-google skill-icon"></i>
+              <h3>Google Cloud</h3>
+              <p>Plataforma de nuvem Google</p>
+            </div>
+            <div class="skill-card">
+              <i class="fab fa-git-alt skill-icon"></i>
+              <h3>Git & GitHub</h3>
+              <p>Controle de versão e colaboração</p>
+            </div>
+            <div class="skill-card">
+              <i class="fas fa-robot skill-icon"></i>
+              <h3>Robot Framework</h3>
+              <p>Automação de testes</p>
+            </div>
+            <div class="skill-card">
+              <i class="fas fa-mobile-alt skill-icon"></i>
+              <h3>Dart</h3>
+              <p>Desenvolvimento Flutter</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="projects">
+        <div class="container">
+          <h2 class="section-title">Projetos</h2>
+          <div class="projects-grid">
+            <div class="project-card">
+              <div class="project-image">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+              <div class="project-content">
+                <h3>E-commerce Da Roça</h3>
+                <p>
+                  Aplicação full-stack desenvolvida seguindo o padrão MVC com
+                  HTML semântico, CSS e Node.js. Inclui autenticação e
+                  gerenciamento de produtos.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">HTML5</span>
+                  <span class="tech-tag">CSS3</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">Node.js</span>
+                  <span class="tech-tag">Figma</span>
+                  <span class="tech-tag">SQL</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/omoshaa"
+                    target="_blank"
+                    class="project-link"
+                    ><i class="fas fa-external-link-alt"></i> Demo</a
+                  >
+                  <a
+                    href="https://github.com/omoshaa"
+                    target="_blank"
+                    class="project-link"
+                    ><i class="fab fa-github"></i> Código</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-image">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <div class="project-content">
+                <h3>Aplicativo Educacional PUNE</h3>
+                <!-- Projeto completo será desenvolvido com Flutter, Firebase e Python -->
+                <p>
+                  Plataforma web educacional voltada para aprendizado interativo
+                  e gamificação na educação. Primeiro desenvolvimento focado na
+                  versão web.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">HTML5</span>
+                  <span class="tech-tag">CSS3</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">Node.js</span>
+                  <span class="tech-tag">SQL</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/omoshaa"
+                    target="_blank"
+                    class="project-link"
+                    ><i class="fas fa-external-link-alt"></i> Demo</a
+                  >
+                  <a
+                    href="https://github.com/omoshaa"
+                    target="_blank"
+                    class="project-link"
+                    ><i class="fab fa-github"></i> Código</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-image"><i class="fas fa-chart-line"></i></div>
+              <div class="project-content">
+                <h3>Sistema de Análise de Dados</h3>
+                <p>
+                  <span class="badge-em-desenvolvimento">🚧 Em Produção</span
+                  ><br />Plataforma para análise e visualização de dados em
+                  tempo real com dashboards interativos e relatórios
+                  personalizados.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Pandas</span>
+                  <span class="tech-tag">Flask</span>
+                  <span class="tech-tag">Chart.js</span>
+                  <span class="tech-tag">SQL</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="#"
+                    class="project-link disabled"
+                    style="opacity: 0.5; pointer-events: none"
+                    ><i class="fas fa-clock"></i> Em breve</a
+                  >
+                  <a
+                    href="https://github.com/omoshaa"
+                    target="_blank"
+                    class="project-link"
+                    ><i class="fab fa-github"></i> Código</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="container">
+          <h2 class="section-title">Entre em Contato</h2>
+          <div class="contact-content">
+            <div class="contact-info">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div>
+                  <h3>Email</h3>
+                  <p>moiseisfelipi@gmail.com</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fab fa-linkedin"></i>
+                </div>
+                <div>
+                  <h3>LinkedIn</h3>
+                  <a
+                    href="https://www.linkedin.com/in/mois%C3%A9s-filipe-568412297/"
+                    target="_blank"
+                    >Moisés Filipe</a
+                  >
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fab fa-github"></i>
+                </div>
+                <div>
+                  <h3>GitHub</h3>
+                  <a href="https://github.com/omoshaa" target="_blank"
+                    >@omoshaa</a
+                  >
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fab fa-instagram"></i>
+                </div>
+                <div>
+                  <h3>Instagram</h3>
+                  <a href="https://www.instagram.com/dupe_mosh/" target="_blank"
+                    >@dupe_mosh</a
+                  >
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div>
+                  <h3>Localização</h3>
+                  <p>Campinas, SP - Brasil</p>
+                </div>
+              </div>
+            </div>
+            <form class="contact-form">
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Seu Nome"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Seu Email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Sua Mensagem"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Enviar Mensagem
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 Moisés Filipe. Todos os direitos reservados.</p>
+        <div class="footer-social">
+          <a
+            href="https://www.linkedin.com/in/mois%C3%A9s-filipe-568412297/"
+            target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a href="https://github.com/omoshaa" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a href="https://www.instagram.com/dupe_mosh/" target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
