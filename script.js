@@ -101,10 +101,11 @@ const fadeInObserver = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 
-// Observar skill cards e project cards
+// Observar skill cards, project cards e timeline items
 document.addEventListener("DOMContentLoaded", () => {
   const skillCards = document.querySelectorAll(".skill-card");
   const projectCards = document.querySelectorAll(".project-card");
+  const timelineItems = document.querySelectorAll(".timeline-item");
 
   skillCards.forEach((card, index) => {
     card.style.animationDelay = `${index * 0.05}s`;
@@ -115,31 +116,13 @@ document.addEventListener("DOMContentLoaded", () => {
     card.style.animationDelay = `${index * 0.1}s`;
     fadeInObserver.observe(card);
   });
+
+  timelineItems.forEach((item, index) => {
+    item.style.opacity = "0";
+    item.style.animation = `fadeInUp 0.6s ease ${index * 0.1}s forwards`;
+    fadeInObserver.observe(item);
+  });
 });
-
-// Efeito de digitação no título hero (opcional, sutil)
-function typeWriterEffect() {
-  const heroTitle = document.querySelector(".hero-text h1");
-  if (!heroTitle) return;
-
-  const text = heroTitle.innerHTML;
-  heroTitle.innerHTML = "";
-  heroTitle.style.opacity = "1";
-
-  let i = 0;
-  const speed = 30;
-
-  function type() {
-    if (i < text.length) {
-      heroTitle.innerHTML += text.charAt(i);
-      i++;
-      setTimeout(type, speed);
-    }
-  }
-
-  // Descomentar se quiser o efeito de digitação
-  // setTimeout(type, 500);
-}
 
 // Parallax sutil na imagem do perfil
 const profileImage = document.querySelector(".image-container");
@@ -149,14 +132,14 @@ window.addEventListener("mousemove", (e) => {
     const mouseX = e.clientX / window.innerWidth;
     const mouseY = e.clientY / window.innerHeight;
 
-    const moveX = (mouseX - 0.5) * 20;
-    const moveY = (mouseY - 0.5) * 20;
+    const moveX = (mouseX - 0.5) * 15;
+    const moveY = (mouseY - 0.5) * 15;
 
     profileImage.style.transform = `translate(${moveX}px, ${moveY}px)`;
   }
 });
 
-// Form handling
+// Form handling com validação melhorada
 const contactForm = document.querySelector(".contact-form");
 
 if (contactForm) {
@@ -164,9 +147,9 @@ if (contactForm) {
     e.preventDefault();
 
     const formData = new FormData(this);
-    const name = formData.get("name");
-    const email = formData.get("email");
-    const message = formData.get("message");
+    const name = formData.get("name")?.trim();
+    const email = formData.get("email")?.trim();
+    const message = formData.get("message")?.trim();
 
     // Validação básica
     if (!name || !email || !message) {
@@ -178,6 +161,12 @@ if (contactForm) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       showNotification("Por favor, insira um email válido.", "error");
+      return;
+    }
+
+    // Validação de comprimento mínimo
+    if (message.length < 10) {
+      showNotification("A mensagem deve ter pelo menos 10 caracteres.", "error");
       return;
     }
 
@@ -204,10 +193,11 @@ if (contactForm) {
           },
           function (error) {
             showNotification("Erro ao enviar. Tente novamente.", "error");
+            console.error("EmailJS error:", error);
           }
         )
         .finally(() => {
-          submitBtn.textContent = originalText;
+          submitBtn.innerHTML = originalText;
           submitBtn.disabled = false;
         });
     } else {
@@ -215,14 +205,14 @@ if (contactForm) {
       setTimeout(() => {
         showNotification("✓ Mensagem enviada com sucesso!", "success");
         this.reset();
-        submitBtn.textContent = originalText;
+        submitBtn.innerHTML = originalText;
         submitBtn.disabled = false;
       }, 1500);
     }
   });
 }
 
-// Sistema de notificações minimalista
+// Sistema de notificações melhorado
 function showNotification(message, type) {
   // Remover notificações existentes
   const existing = document.querySelectorAll(".notification");
@@ -233,30 +223,30 @@ function showNotification(message, type) {
   notification.textContent = message;
 
   notification.style.cssText = `
-        position: fixed;
-        top: 24px;
-        right: 24px;
-        background: ${
-          type === "success"
-            ? "rgba(0, 212, 255, 0.1)"
-            : "rgba(239, 68, 68, 0.1)"
-        };
-        color: ${type === "success" ? "#00d4ff" : "#ef4444"};
-        padding: 1rem 1.5rem;
-        border-radius: 12px;
-        border: 1px solid ${
-          type === "success"
-            ? "rgba(0, 212, 255, 0.3)"
-            : "rgba(239, 68, 68, 0.3)"
-        };
-        z-index: 10000;
-        font-size: 0.95rem;
-        font-weight: 500;
-        backdrop-filter: blur(20px);
-        animation: slideIn 0.3s ease;
-        box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.3);
-        max-width: 320px;
-    `;
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    background: ${
+      type === "success"
+        ? "rgba(99, 102, 241, 0.1)"
+        : "rgba(239, 68, 68, 0.1)"
+    };
+    color: ${type === "success" ? "#6366f1" : "#ef4444"};
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    border: 1px solid ${
+      type === "success"
+        ? "rgba(99, 102, 241, 0.3)"
+        : "rgba(239, 68, 68, 0.3)"
+    };
+    z-index: 10000;
+    font-size: 0.95rem;
+    font-weight: 500;
+    backdrop-filter: blur(20px);
+    animation: slideIn 0.3s ease;
+    box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.3);
+    max-width: 320px;
+  `;
 
   document.body.appendChild(notification);
 
@@ -270,56 +260,110 @@ function showNotification(message, type) {
 // Adicionar estilos de animação de notificação
 const style = document.createElement("style");
 style.textContent = `
-    @keyframes slideIn {
-        from {
-            transform: translateX(400px);
-            opacity: 0;
-        }
-        to {
-            transform: translateX(0);
-            opacity: 1;
-        }
+  @keyframes slideIn {
+    from {
+      transform: translateX(400px);
+      opacity: 0;
     }
-    
-    @keyframes slideOut {
-        from {
-            transform: translateX(0);
-            opacity: 1;
-        }
-        to {
-            transform: translateX(400px);
-            opacity: 0;
-        }
+    to {
+      transform: translateX(0);
+      opacity: 1;
     }
-    
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+  }
+  
+  @keyframes slideOut {
+    from {
+      transform: translateX(0);
+      opacity: 1;
     }
+    to {
+      transform: translateX(400px);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .notification {
+    word-wrap: break-word;
+    word-break: break-word;
+  }
 `;
 document.head.appendChild(style);
 
-// Cursor trail effect (sutil)
-let cursorTrail = [];
-const trailLength = 10;
+// Efeito de scroll reveal para elementos
+const revealElements = document.querySelectorAll(".highlight-item, .contact-item");
 
-document.addEventListener("mousemove", (e) => {
-  if (window.innerWidth > 1024) {
-    cursorTrail.push({ x: e.clientX, y: e.clientY });
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = "1";
+        entry.target.style.animation = "fadeInUp 0.6s ease forwards";
+      }
+    });
+  },
+  { threshold: 0.2 }
+);
 
-    if (cursorTrail.length > trailLength) {
-      cursorTrail.shift();
-    }
-  }
+revealElements.forEach((el) => {
+  el.style.opacity = "0";
+  revealObserver.observe(el);
 });
 
-// Loading inicial
+// Counter para stats (opcional, se adicionar no futuro)
+function animateCounter(element, target, duration = 2000) {
+  let current = 0;
+  const increment = target / (duration / 16);
+
+  const timer = setInterval(() => {
+    current += increment;
+    if (current >= target) {
+      element.textContent = target;
+      clearInterval(timer);
+    } else {
+      element.textContent = Math.floor(current);
+    }
+  }, 16);
+}
+
+// Prevenção de click duplo em botões
+document.querySelectorAll(".btn").forEach((btn) => {
+  btn.addEventListener("click", function (e) {
+    if (this.classList.contains("processing")) {
+      e.preventDefault();
+      return false;
+    }
+    this.classList.add("processing");
+    setTimeout(() => this.classList.remove("processing"), 2000);
+  });
+});
+
+// Verificar se é mobile
+function isMobile() {
+  return window.innerWidth <= 768;
+}
+
+// Desabilitar parallax em mobile
+if (isMobile()) {
+  window.removeEventListener("mousemove", (e) => {
+    const profileImage = document.querySelector(".image-container");
+    if (profileImage) {
+      profileImage.style.transform = "translate(0, 0)";
+    }
+  });
+}
+
+// Carregamento suave da página
 window.addEventListener("load", () => {
   document.body.style.opacity = "0";
   setTimeout(() => {
@@ -328,22 +372,32 @@ window.addEventListener("load", () => {
   }, 100);
 });
 
-// Prevenção de click duplo em botões
-document.querySelectorAll(".btn").forEach((btn) => {
-  btn.addEventListener("click", function () {
-    if (this.classList.contains("processing")) {
-      return false;
-    }
-    this.classList.add("processing");
-    setTimeout(() => this.classList.remove("processing"), 2000);
-  });
-});
+// Console branding
+console.log(
+  "%c🚀 Portfolio de Moisés Filipe carregado com sucesso!",
+  "color: #6366f1; font-size: 16px; font-weight: bold;"
+);
+console.log(
+  "%c💻 Backend & Full Stack Developer",
+  "color: #a78bfa; font-size: 12px;"
+);
+console.log(
+  "%c🪖 Exército Brasileiro | COTUCA | USP",
+  "color: #6366f1; font-size: 12px;"
+);
+console.log(
+  "%c📧 moiseisfelipi@gmail.com | 📱 +55 19 97115-4452",
+  "color: #a78bfa; font-size: 12px;"
+);
 
-console.log(
-  "%c🚀 Portfolio carregado com sucesso!",
-  "color: #00d4ff; font-size: 16px; font-weight: bold;"
-);
-console.log(
-  "%cDesenvolvido por Moisés Filipe",
-  "color: #7b68ee; font-size: 12px;"
-);
+// Service Worker registration (se necessário no futuro)
+if ("serviceWorker" in navigator) {
+  // Pode implementar PWA no futuro
+}
+
+// Detectar preferência de tema (dark/light)
+const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+if (!prefersDarkMode && document.body) {
+  // Sempre usar dark mode, mas código está pronto para light mode se necessário
+  document.documentElement.style.colorScheme = "dark";
+}
