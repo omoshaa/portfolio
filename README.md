@@ -1,6 +1,6 @@
 # 🌟 Portfólio - Moisés Filipe
 
-Um portfólio moderno e responsivo desenvolvido para apresentar minha jornada como Desenvolvedor Full Stack.
+Um portfólio moderno, responsivo e estratégico desenvolvido para apresentar minha jornada como Desenvolvedor Backend & Full Stack.
 
 ## 🌐 Ver Portfólio Online
 
@@ -8,39 +8,43 @@ Um portfólio moderno e responsivo desenvolvido para apresentar minha jornada co
 
 _Clique no link acima para visualizar o portfólio completo e interativo!_
 
+---
+
 ## 🚀 Sobre o Projeto
 
-Este portfólio foi desenvolvido com HTML5, CSS3 e JavaScript puro, focando em uma experiência de usuário fluida e design moderno. O site apresenta minhas habilidades, experiências e projetos de forma interativa e profissional.
+Este portfólio foi desenvolvido com HTML5, CSS3 e JavaScript puro, focando em uma experiência de usuário fluida, design moderno e responsividade total. O site apresenta minha jornada no Exército Brasileiro, educação técnica no COTUCA, foco acadêmico na USP e meus 3 projetos estratégicos de portfólio.
 
 ## ✨ Características
 
 - **Design Responsivo**: Totalmente adaptável para desktop, tablet e mobile
-- **Interface Moderna**: Design clean e profissional com animações suaves
+- **Interface Moderna**: Design clean, profissional com animações suaves e gradientes
 - **SEO Otimizado**: Meta tags e estrutura HTML semântica
 - **Performance**: Carregamento rápido e código otimizado
 - **Interativo**: Formulário de contato funcional com EmailJS
-- **Acessível**: Seguindo boas práticas de acessibilidade web
+- **Acessível**: Seguindo boas práticas de acessibilidade web (WCAG)
+- **Tema Adaptativo**: Suporte a dark/light mode
 
 ## 🛠️ Tecnologias Utilizadas
 
 - **Frontend:**
-
   - HTML5 (estrutura semântica)
-  - CSS3 (Flexbox, Grid, animações)
+  - CSS3 (Flexbox, Grid, animações CSS)
   - JavaScript ES6+ (interatividade)
   - Font Awesome (ícones)
-  - Google Fonts (tipografia)
+  - Google Fonts (tipografia Inter)
 
-- **Serviços:**
+- **Serviços & Integração:**
   - EmailJS (envio de emails)
+  - GitHub Pages (hospedagem)
 
 ## 📂 Estrutura do Projeto
 
 ```
-portfolio-main/
+portfolio/
 ├── index.html          # Página principal
-├── style.css           # Estilos CSS
+├── style.css           # Estilos CSS3
 ├── script.js           # Funcionalidades JavaScript
+├── README.md           # Documentação
 └── assets/
     ├── cv.pdf          # Currículo em PDF
     └── minhafoto.jpg   # Foto de perfil
@@ -48,136 +52,155 @@ portfolio-main/
 
 ## 🎯 Seções do Portfólio
 
-1. **Início (Hero)**: Apresentação inicial com foto e botões de ação
-2. **Sobre**: Informações pessoais e profissionais
-3. **Experiência**: Trajetória profissional e acadêmica
-4. **Habilidades**: Tecnologias e ferramentas dominadas
-5. **Projetos**: Showcase de trabalhos realizados
-6. **Contato**: Formulário funcional e informações de contato
+1. **Hero Section**: Apresentação com foto, status atual e botões de ação
+2. **Sobre Mim**: Informações pessoais, status militar, educação e objetivos
+3. **Habilidades**: Stack tecnológico (Backend, Frontend, Cloud, DevOps)
+4. **Projetos Estratégicos**: Os 3 grandes projetos do backlog
+5. **Contato**: Formulário funcional e informações de contato
 
-## 🔧 Habilidades em Destaque
+---
 
-### Linguagens de Programação
+## 🔧 Stack Tecnológico em Destaque
 
-- Java
+### 💻 **Linguagens de Programação**
+- Java (Spring Boot)
+- JavaScript & TypeScript
 - Python
-- JavaScript/TypeScript
-- Dart (Flutter)
+- SQL
 
-### Tecnologias Frontend
+### 🎯 **Frameworks Backend**
+- Spring Boot
+- Node.js & NestJS
+- REST APIs
 
+### 🎨 **Frontend**
+- React & Next.js
 - HTML5 & CSS3
-- React.js
-- Desenvolvimento Responsivo
+- Responsive Design
 
-### Tecnologias Backend
+### 🗄️ **Banco de Dados**
+- PostgreSQL
+- MySQL
+- MongoDB
 
-- Node.js
-- APIs RESTful
-
-### Banco de Dados
-
-- SQL & NoSQL
-- Oracle
-
-### Cloud & DevOps
-
+### ☁️ **Cloud & DevOps**
 - AWS (Amazon Web Services)
-- Google Cloud Platform
+- Google Cloud Platform (GCP)
 - Docker
-
-### Ferramentas & Metodologias
-
 - Git & GitHub
-- Robot Framework
-- Figma
+
+---
+
+## 🏗️ Projetos em Destaque
+
+### 1. 💳 **FinTech API - Sistema Bancário Seguro**
+**Stack:** Java, Spring Boot, Spring Security (JWT), PostgreSQL, JUnit
+
+Uma API RESTful robusta para simulação de operações bancárias com foco em segurança, transações ACID e alta cobertura de testes.
+
+### 2. 🛒 **E-Commerce Microservices**
+**Stack:** Node.js, TypeScript, NestJS, Docker, Redis, RabbitMQ/Kafka
+
+Arquitetura de microsserviços com mensageria assíncrona, demonstrando conhecimento avançado em padrões distribuídos.
+
+### 3. 📊 **SaaS Plataforma de Gestão Full Stack**
+**Stack:** Next.js, React, TailwindCSS, Prisma ORM, Node.js, WebSockets
+
+Dashboard interativo em tempo real para gerenciamento de projetos, com SSR e comunicação em tempo real.
+
+---
+
+## 👨‍💼 Perfil Profissional
+
+**Status Atual:**
+- 🪖 Servindo ao Exército Brasileiro (Disciplina & Liderança)
+- 🎓 Estudante do Colégio Técnico de Campinas - UNICAMP (COTUCA)
+- 🎯 Focado em Ciência da Computação na USP
+
+**Objetivo:**
+Primeira oportunidade profissional como Desenvolvedor Backend/Full Stack, transformando conhecimento teórico em código de impacto.
+
+---
 
 ## 📋 Pré-requisitos
 
-Para executar este projeto localmente, você precisa apenas de um navegador web moderno.
+Para visualizar este portfólio, você precisa apenas de um navegador web moderno.
 
-## 🚀 Como Executar
+## 🚀 Como Executar Localmente
 
 1. **Clone o repositório:**
-
    ```bash
    git clone https://github.com/omoshaa/portfolio.git
+   cd portfolio
    ```
 
-2. **Navegue até o diretório:**
+2. **Use um servidor local:**
+   - **Com Python:**
+     ```bash
+     python -m http.server 8000
+     ```
+   - **Com VS Code (Live Server):**
+     Clique com botão direito no `index.html` → "Open with Live Server"
 
-   ```bash
-   cd portfolio/portfolio-main
-   ```
-
-3. **Abra o arquivo index.html:**
-
-   - Clique duas vezes no arquivo `index.html`, ou
-   - Use um servidor local como Live Server (VS Code), ou
-   - Serve com Python: `python -m http.server 8000`
-
-4. **Acesse no navegador:**
+3. **Acesse no navegador:**
    ```
    http://localhost:8000
    ```
 
+---
+
 ## 📱 Responsividade
 
-O portfólio foi desenvolvido seguindo a abordagem **Mobile First** e é totalmente responsivo:
+O portfólio segue a abordagem **Mobile First** e é 100% responsivo:
 
-- **Desktop**: Layout em grid com sidebar
-- **Tablet**: Adaptação do layout para telas médias
-- **Mobile**: Menu hambúrguer e layout em coluna única
+- **Desktop (1200px+):** Layout em grid com sidebar
+- **Tablet (768px - 1199px):** Adaptação fluida do layout
+- **Mobile (< 768px):** Menu hambúrguer e layout em coluna única
 
-## 🎨 Personalização
+---
 
-### Cores Principais
+## 🎨 Design & Personalização
 
-- **Primária**: Azul tecnológico
-- **Secundária**: Branco e tons de cinza
-- **Destaque**: Gradientes modernos
+### **Paleta de Cores**
+- **Primária:** Azul tecnológico (#6366F1)
+- **Secundária:** Gradientes modernos (roxo para violeta)
+- **Fundo:** Dark mode otimizado
+- **Destaque:** Branco e tons de cinza
 
-### Fontes
+### **Tipografia**
+- **Font:** Inter (Google Fonts)
+- **Títulos:** Weight 600-800
+- **Corpo:** Weight 300-500
 
-- **Principal**: Inter (Google Fonts)
-- **Títulos**: Inter Weight 600-800
-- **Texto**: Inter Weight 300-500
+---
 
-## 📬 Contato Funcional
+## 📬 Contato
 
-O formulário de contato utiliza **EmailJS** para envio de emails diretamente pelo frontend, sem necessidade de backend.
+**Moisés Filipe** - Desenvolvedor Backend & Full Stack
 
-### Configuração do EmailJS:
+- 💼 [LinkedIn](https://www.linkedin.com/in/moisés-filipe-568412297/)
+- 📧 Email: [moiseisfelipi@gmail.com](mailto:moiseisfelipi@gmail.com)
+- 📱 WhatsApp: [+55 19 97115-4452](https://wa.me/5519971154452)
+- 🌐 Site: [omoshaa.github.io/portfolio](https://omoshaa.github.io/portfolio/)
+- 🐙 GitHub: [github.com/omoshaa](https://github.com/omoshaa)
+- 📸 Instagram: [@dupe_mosh](https://www.instagram.com/dupe_mosh/)
 
-1. Crie uma conta no [EmailJS](https://emailjs.com/)
-2. Configure um serviço de email
-3. Atualize as credenciais no `script.js`
+---
 
-## 📊 Performance
+## 🔍 SEO & Performance
 
-- **PageSpeed Insights**: 95+ pontos
-- **Lighthouse**: Excelente em todas as categorias
-- **Tamanho**: < 2MB total
-- **Tempo de carregamento**: < 3 segundos
+- **Meta tags otimizadas** para mecanismos de busca
+- **Open Graph** para redes sociais
+- **Twitter Cards** para compartilhamento
+- **Estrutura HTML semântica**
+- **Lighthouse Score:** 95+
+- **Tempo de carregamento:** < 2 segundos
 
-## 🔍 SEO
-
-- Meta tags otimizadas
-- Open Graph para redes sociais
-- Twitter Cards
-- Estrutura HTML semântica
-- URLs amigáveis
-
-## 📈 Métricas
-
-- **Acessibilidade**: AAA
-- **Performance**: 95+
-- **SEO**: 100
-- **Melhores Práticas**: 95+
+---
 
 ## 🤝 Contribuição
 
-Contribuições são bem-vindas! Sinta-se à vontade para:
+Se você quer melhorar este portfólio ou sugerir mudanças, sinta-se livre para:
 
 1. Fazer um fork do projeto
 2. Criar uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
@@ -185,21 +208,14 @@ Contribuições são bem-vindas! Sinta-se à vontade para:
 4. Push para a branch (`git push origin feature/AmazingFeature`)
 5. Abrir um Pull Request
 
+---
+
 ## 📝 Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
-## 📞 Contato
-
-**Moisés Filipe** - Desenvolvedor Full Stack
-
-- 💼 [LinkedIn](https://www.linkedin.com/in/mois%C3%A9s-filipe-568412297/)
-- 📧 Email: [Através do formulário de contato](https://omoshaa.github.io/portfolio/#contact)
-- 🌐 Site: [omoshaa.github.io/portfolio](https://omoshaa.github.io/portfolio/)
-- 🐙 GitHub: [github.com/omoshaa](https://github.com/omoshaa)
 
 ---
 
 ⭐ Se este projeto te ajudou de alguma forma, considere dar uma estrela!
 
-**Feito com ❤️ por Moisés Filipe**
+**Feito com ❤️ por Moisés Filipe | Exército Brasileiro 🪖**
